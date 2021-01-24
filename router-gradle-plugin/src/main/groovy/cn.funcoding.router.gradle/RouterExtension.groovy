@@ -1,0 +1,3 @@
+class RouterExtension {
+    String wikiDir
+}

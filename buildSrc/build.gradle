@@ -1,0 +1,33 @@
+// 引用groovy插件，编译插件工程中的代码
+apply plugin: 'groovy'
+
+// 声明插件仓库地址
+repositories {
+    jcenter()
+    google()
+}
+
+// 声明依赖的库
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+
+// 调用maven插件，用于发布
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            // 设置发布路径
+            repository(url: uri('../repo')) {
+                // 设置groupId，通常为包名
+                pom.groupId = 'cn.funcoding.router'
+                // 设置当前插件名称
+                pom.artifactId = 'router-gradle-plugin'
+                // 设置插件的版本号
+                pom.version = '1.0.0'
+            }
+        }
+    }
+}

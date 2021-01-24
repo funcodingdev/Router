@@ -1,6 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'cn.funcoding.router'
+}
+
+router {
+    wikiDir rootProject.getRootDir().absolutePath
 }
 
 android {
