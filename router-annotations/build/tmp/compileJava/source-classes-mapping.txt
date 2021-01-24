@@ -1,2 +1,0 @@
-cn/funcoding/router/annotations/Destination.java
- cn.funcoding.router.annotations.Destination
