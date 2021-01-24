@@ -1,3 +1,5 @@
 include ':app'
 include ':router-gradle-plugin'
+include ':router-annotations'
+include ':router-processor'
 rootProject.name = "Router"
